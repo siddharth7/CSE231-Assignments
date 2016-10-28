@@ -5,6 +5,7 @@
 //run using gcc -lpthread 14105_mtp_c1.c 
 #define MAX 1000000000
 sem_t m;
+
 static volatile long long int count=0;
 void *increment(void *c)
 {
@@ -19,6 +20,7 @@ void *increment(void *c)
 		}
 	return NULL;
 }
+
 int main(int argc, char *argv[])
 {
 	int i,j;
@@ -31,7 +33,6 @@ int main(int argc, char *argv[])
         double total_time=0;
         while(counter<50)
         {
-	        //printf("%d\n",counter);
 	        count = 0;
 	        clock_t start, end;
 	        double cpu_time_used;
