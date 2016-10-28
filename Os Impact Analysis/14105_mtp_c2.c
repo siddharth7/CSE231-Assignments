@@ -3,11 +3,13 @@
 #include<assert.h>
 //run using gcc -lpthread 14105_mtp_c1.c 
 #define MAX 1000000000
+
 int t;
 typedef struct counte{
 	long long int count;
 	pthread_mutex_t mutex1;
 }counte;
+
 void *increment(void *arg)
 {
 	counte *c = (counte *)arg;
@@ -22,6 +24,7 @@ void *increment(void *arg)
 	}
 	return NULL;
 }
+
 int main(int argc, char *argv[])
 {
 	int i;
@@ -29,13 +32,10 @@ int main(int argc, char *argv[])
 	{
 		t=i;
 		pthread_t t1[i+1];
-		//pthread_t wcount;
-		//pthread_mutex_init(&mutex1,NULL);
         int counter=0;
         double total_time=0;
         while(counter<50)
         {
-	        //printf("%d\n",counter);
 	        counte c;
 	        c.count=0;
 	        pthread_mutex_init(&(c.mutex1),NULL);
@@ -61,7 +61,6 @@ int main(int argc, char *argv[])
 		    printf("counter value is :%lld\n",c.count);
 		}
 		printf("time taken %lf by %d threads\n",total_time/50, i);
-		//printf("counter value is :%lld\n",count);
 	}
     return  0;
 }

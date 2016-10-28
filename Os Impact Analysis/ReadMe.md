@@ -9,3 +9,5 @@ Increase the number of threads starting from 2 to 10 counting 50 times each (wri
 Measure the average time. 
 Plot all the averages that you obtained including the one which you computed earlier and explain it in terms of performance and correctness specifically: 1) do you see any relation between number of threads and performance, what is it 2) do you see any relation between number of threads and correctness, what is it - submit the plot and your explanation as a pdf file and name it as Rollno_plot1.pdf.
 5. Write a multi-threaded program that uses counter 1, with semaphores to ensure correctness,  to count till billions.  Increase the number of threads starting from 2 to 10 counting 50 times each (write a program to do it) and compute the average time taken. Name the files as Rollno_mtp_c1_sem.c. Plot this with the previous plot and comment on performance and correctness as above - name the file Rollno_plot2.pdf.
+
+- Through this assignment we can observe the affect of concurrency and synchrinzation in terms of program correctness and running time.

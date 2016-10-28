@@ -11,6 +11,7 @@ void *increment(void *c)
 		count++;
 	return NULL;
 }
+
 int main(int argc, char *argv[])
 {
 	int i,j;
@@ -21,7 +22,6 @@ int main(int argc, char *argv[])
         double total_time=0;
         while(counter<50)
         {
-	        //printf("%d\n",counter);
 	        count = 0;
 	        clock_t start, end;
 	        double cpu_time_used;

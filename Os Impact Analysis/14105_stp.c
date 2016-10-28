@@ -4,13 +4,16 @@
 #include<time.h>
 //run using gcc -lpthread 14105_stp.c 
 #define MAX 1000000000
+
 typedef struct count{
     long long int value;
 }count;
+
 void init(count *c)
 {
     c->value=0;
 }
+
 void *increment(void *c)
 {
     while(((count *)c)->value!=MAX)
@@ -18,11 +21,13 @@ void *increment(void *c)
     pthread_exit(0);
     return NULL;
 }
+
 long long int get(count *c)
 {
     long long int rc=c->value;
     return rc;
 }
+
 int main(int argc, char *argv[])
 {
     int counter = 0;
@@ -41,8 +46,6 @@ int main(int argc, char *argv[])
             end = clock();
             cpu_time_used = ((double) (end - start)) / CLOCKS_PER_SEC;
             total_time+=cpu_time_used;
-            //printf("time taken %lf\n",cpu_time_used);
-            //printf("counter value is :%lld\n",get(&c));
             counter++;
         }
         printf("Average time taken on 50 iterations is %lf\n",total_time/50);
