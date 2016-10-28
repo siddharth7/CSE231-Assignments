@@ -336,24 +336,8 @@ void print_dataBitmaps(int fileSystemId)
 
 int main()
 {
-	// int fileSysId = createSFS("disk0", nbytes);			// init file system on disk0 of ntfs: 27, size = 262144B
-	// printf("File System is: %d\n", fileSysId);
-
-	// int val2 = writeData(0, -31,"a");
-
-	// int val = readData(0,-30,&nblock);
-	// printf("Block Size: %d\n",val);
-	// printf("Block Read: %s", nblock);
-	
-	// writeFile(0, "file1", "abc");
-
-
 	int val2 = readFile(0, "file2", &nblock);
 	printf("Read Data: %s", nblock);
-	
-	// print_inodeBitmaps(createSFS("disk0", nbytes));
-	// print_dataBitmaps(createSFS("disk0", nbytes));
-
 	return 0;
 }
 
